@@ -16,12 +16,12 @@ public class Problema00 {
         System.out.printf("%d\n", misterio(datos, datos.length));
     }
 
-    public static int misterio(int[] arreglo, int tamanio) {
+    public static int misterio(int[] datos, int tamaño) {
 
-        if (tamanio == 1) {
-            return arreglo[0];
+        if (tamaño == 1) {
+            return datos[0];
         } else {
-            return arreglo[tamanio - 1] + misterio(arreglo, tamanio - 1);
+            return datos[tamaño - 1] + misterio(datos, tamaño - 1);
         }
     }
 }

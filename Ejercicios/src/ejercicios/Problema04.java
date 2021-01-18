@@ -15,7 +15,29 @@ public class Problema04 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here    public static void main(String[] args) {
+        double base;
+        double potencia;
+        double[] bases = {100, 90, 80, 70, 60};
+        double[] potencias = {2, 3, 2, 2, 1};
+        double[] resultado = new double[5];
+
+        for (int i = 0; i < 5; i++) {
+            base = bases[i];
+            potencia = potencias[i];
+            resultado[i] = potencia(base, potencia);
+            System.out.printf("El numero %.1f elevado a %.1f = %.1f\n",
+                    bases[i], potencias[i], resultado[i]);
+        }
+
     }
-    
+
+    public static double potencia(double base, double potencia) {
+
+        if (potencia == 1) {
+            return base;
+        } else {
+            return base * potencia(base, potencia - 1);
+        }
+    }
 }
