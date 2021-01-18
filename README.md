@@ -23,7 +23,10 @@ public class Ejemplo00 {
 }
 ```
 #### Respuesta aquí
-
+En este codigo la salida va a ser 17, debido a que es un codigo que recorre un 
+arreglo de tipo entero llamado datos, y mientras recorre los arreglos desde la 
+posicion 0 hasta la n todos los datos de todas las posiciones son sumados para 
+al final mostral la suma total de todos los elementos del arreglo datos
 #### Fin respuesta
 
 ***
