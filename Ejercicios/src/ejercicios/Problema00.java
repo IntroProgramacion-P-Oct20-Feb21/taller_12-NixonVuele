@@ -11,11 +11,23 @@ package ejercicios;
  */
 public class Problema00 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int[] datos = {10, 2, 4, 1};
+        System.out.printf("%d\n", misterio(datos, datos.length));
     }
-    
+
+    public static int misterio(int[] datos, int tamaño) {
+
+        if (tamaño == 1) {
+            return datos[0];
+        } else {
+            return datos[tamaño - 1] + misterio(datos, tamaño - 1);
+        }
+    }
 }
+/*
+En este codigo la salida va a ser 17, debido a que es un codigo que recorre un 
+arreglo de tipo entero llamado datos, y mientras recorre los arreglos desde la 
+posicion 0 hasta la n todos los datos de todas las posiciones son sumados para 
+al final mostral la suma total de todos los elementos del arreglo datos
+*/
